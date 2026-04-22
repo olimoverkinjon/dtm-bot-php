@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/webhook.php",
+      "use": "vercel-php@0.6.0"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/webhook",
+      "dest": "/api/webhook.php"
+    }
+  ],
+  "env": {
+    "BOT_TOKEN":           "@bot_token",
+    "CHANNEL_USERNAME":    "@channel_username",
+    "GROUP_ID":            "@group_id",
+    "ADMIN_IDS":           "@admin_ids",
+    "UPSTASH_REDIS_URL":   "@upstash_redis_url",
+    "UPSTASH_REDIS_TOKEN": "@upstash_redis_token"
+  }
+}
