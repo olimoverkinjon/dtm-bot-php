@@ -12,12 +12,4 @@
       "dest": "/api/webhook.php"
     }
   ],
-  "env": {
-    "API_TOKEN": "@api_token",
-    "CHANNEL_USERNAME": "@channel_username",
-    "GROUP_ID": "@group_id",
-    "ADMIN_IDS": "@admin_ids",
-    "UPSTASH_REDIS_URL": "@upstash_redis_url",
-    "UPSTASH_REDIS_TOKEN": "@upstash_redis_token"
-  }
 }
