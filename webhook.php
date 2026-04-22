@@ -10,7 +10,7 @@ declare(strict_types=1);
  * Leads are pushed directly to the Telegram group (no DB needed).
  *
  * Required environment variables:
- *   BOT_TOKEN            — Telegram bot token
+ *   API_TOKEN            — Telegram bot token
  *   CHANNEL_USERNAME     — e.g. @registan_abituriyent
  *   GROUP_ID             — Telegram group/channel id (negative number)
  *   ADMIN_IDS            — Comma-separated list of admin user ids
@@ -413,7 +413,7 @@ if (!is_array($update)) {
 }
 
 // Boot services
-$tg = new Telegram(Config::require('BOT_TOKEN'));
+$tg = new Telegram(Config::require('API_TOKEN'));
 
 $store = new SessionStore(
     Config::require('UPSTASH_REDIS_URL'),
